@@ -4,9 +4,9 @@ namespace Iterator;
 
 use Node;
 
+// Polymorphed PreOrder iterator to traverse the tree data structure in a PreOrder manner
 class PreOrderIterator extends AbstractOrderIterator
 {
-    // TODO specific methods
     public function __construct(Node $root)
     {
         parent::__construct($root);
