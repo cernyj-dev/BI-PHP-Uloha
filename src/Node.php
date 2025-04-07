@@ -2,7 +2,6 @@
 
 class Node extends BaseNode implements IteratorAggregate
 {
-    // Implement me
     protected int $value;
 
     function __construct(int $val){
