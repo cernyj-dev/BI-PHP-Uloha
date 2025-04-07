@@ -4,10 +4,9 @@ namespace Iterator;
 
 use Node;
 
+// Polymorphed InOrder iterator to traverse the tree data structure in an InOrder manner
 class InOrderIterator extends AbstractOrderIterator
 {
-    // TODO specific methods
-
     public function __construct(Node $root)
     {
         parent::__construct($root);
@@ -35,17 +34,14 @@ class InOrderIterator extends AbstractOrderIterator
     }
     public function current(): ?Node
     {
-        // TODO: Implement current() method.
         return end($this->stack);
     }
     public function key(): bool|int|float|string|null
     {
-        // TODO: Implement key() method.
         return $this->node_ptr->getValue();
     }
     public function valid(): bool
     {
-        // TODO: Implement valid() method.
         return !empty($this->stack);
     }
 }
