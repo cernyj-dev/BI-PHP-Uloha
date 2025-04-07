@@ -3,10 +3,9 @@
 namespace Iterator;
 
 use Node;
-
+// Represents Abstract Iterator from which specific iterators will inherit from
 abstract class AbstractOrderIterator implements \Iterator
 {
-    // TODO: shared attributes?
     protected ?Node $node_ptr;
     protected ?Node $first_ptr;
     protected $stack;
@@ -14,7 +13,6 @@ abstract class AbstractOrderIterator implements \Iterator
 
     public function __construct(Node $root)
     {
-        // TODO: Implement constructor.
         $this->node_ptr = $root;
         $this->first_ptr = $root;
         $this->stack= [];
@@ -23,7 +21,6 @@ abstract class AbstractOrderIterator implements \Iterator
 
     public function current(): ?Node
     {
-        // TODO: Implement current() method.
         return $this->stack[$this->index];
     }
 
@@ -34,13 +31,11 @@ abstract class AbstractOrderIterator implements \Iterator
 
     public function key(): bool|int|float|string|null
     {
-        // TODO: Implement key() method.
         return $this->stack[$this->index]->getValue();
     }
 
     public function valid(): bool
     {
-        // TODO: Implement valid() method.
         return isset($this->stack[$this->index]);
     }
 
